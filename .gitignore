@@ -1,0 +1,31 @@
+# Kotlin / Gradle
+.gradle/
+build/
+out/
+*.class
+*.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# 临时文件
+*.tmp
+*.log
+*.bak
+~$*
+
+# EA 日志
+*.qea-journal
+*.eapx-journal
