@@ -12,7 +12,11 @@ OUT = os.path.join(BASE, "cs24104-2024210622-姚帅-坦克大战联机复刻-实
 INCLUDE_DIRS = ["docs", "report", "src", "maps"]
 SKIP_DIRS = {"__pycache__", ".git", "raw"}
 SKIP_SUFFIX = {".log", ".pyc"}
-SKIP_FILES = {"test-clean.png"}
+SKIP_FILES = {"test-clean.png", "fig-02-tiled-ui.png"}
+EXCLUDE_REL = {
+    os.path.join("docs", "个人任务清单.md"),
+    os.path.join("docs", "操作步骤.md"),
+}
 
 
 def iter_files():
@@ -32,6 +36,12 @@ def iter_files():
                 if any(fn.endswith(s) for s in SKIP_SUFFIX):
                     continue
                 p = os.path.join(dirpath, fn)
+                rel = os.path.relpath(p, BASE)
+                if rel in EXCLUDE_REL:
+                    continue
+                # PDF 单独提交，源码 zip 里不再放副本
+                if rel.startswith("report" + os.sep) and fn.lower().endswith(".pdf"):
+                    continue
                 if os.path.isfile(p):
                     yield p
     p = os.path.join(BASE, "model", "TankBattle.qea")
