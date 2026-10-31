@@ -29,3 +29,8 @@ Thumbs.db
 # EA 日志
 *.qea-journal
 *.eapx-journal
+
+# 生成物（可重建）
+model/images/raw/
+*.zip
+.dsh-office-*/
