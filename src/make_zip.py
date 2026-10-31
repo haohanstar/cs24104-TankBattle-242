@@ -2,12 +2,16 @@
 """在用户审完 PDF 后，打包实验一源码 zip。
 
 默认不执行；用户确认后运行：python src/make_zip.py
+输出位置：report/（与 PDF、DOCX 等交付件放在一起）
 """
 import os
 import zipfile
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(BASE, "cs24104-2024210622-姚帅-坦克大战联机复刻-实验一软件项目计划-源码.zip")
+OUT = os.path.join(
+    BASE, "report",
+    "cs24104-2024210622-姚帅-坦克大战联机复刻-实验一软件项目计划-源码.zip",
+)
 
 INCLUDE_DIRS = ["docs", "report", "src", "maps"]
 SKIP_DIRS = {"__pycache__", ".git", "raw"}
@@ -36,6 +40,9 @@ def iter_files():
                 if any(fn.endswith(s) for s in SKIP_SUFFIX):
                     continue
                 p = os.path.join(dirpath, fn)
+                # zip 输出在 report/ 里，打包时跳过自身，避免自包含
+                if os.path.abspath(p) == os.path.abspath(OUT):
+                    continue
                 rel = os.path.relpath(p, BASE)
                 if rel in EXCLUDE_REL:
                     continue

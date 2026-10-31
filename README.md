@@ -19,19 +19,19 @@
 ├─ README.md
 ├─ .gitignore
 ├─ docs/                 项目计划、地图规范、AI 记录、操作步骤
-├─ report/               实验一报告（docx/pdf/md）与图片
+├─ report/               实验一交付件：报告 docx/pdf、源码 zip
 │  └─ assets/            环境截图、EA 导出图、甘特图、风险矩阵
 ├─ model/                EA 17.2 工程与导出图
 │  ├─ TankBattle.qea
 │  └─ images/
 ├─ src/                  报告/EA/图表生成脚本（可复现）
-├─ maps/                 地图 schema 与示例
-└─ 实验一报告.pdf        最终提交件（生成后放根目录或 report/）
+└─ maps/                 地图 schema 与示例
 ```
 
 ## 实验一交付物
 
 - `report/坦克大战实验一报告.docx` / `report/cs24104-2024210622-姚帅-坦克大战联机复刻-实验一软件项目计划.pdf`：实验一软件项目计划初稿（14 页）。
+- `report/cs24104-2024210622-姚帅-坦克大战联机复刻-实验一软件项目计划-源码.zip`：源码包，审完 PDF 后由 `python src/make_zip.py` 生成到 `report/`。
 - `model/TankBattle.qea`：EA 17.2 工程，含 WBS、构件、用例、类图、活动图。
 - `report/assets/`：环境截图、EA 导出图、甘特图、风险矩阵。
 - `src/`：报告、图表、EA 工程的生成脚本；`src/make_zip.py` 在审完 PDF 后再运行。
