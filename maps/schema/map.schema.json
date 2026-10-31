@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TankBattle map metadata",
+  "type": "object",
+  "required": ["map_id", "name", "version", "size", "tiles"],
+  "properties": {
+    "map_id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+    "name": { "type": "string" },
+    "version": { "type": "integer", "minimum": 1 },
+    "seed": { "type": "integer", "minimum": 0 },
+    "difficulty": { "enum": ["easy", "normal", "hard"] },
+    "hash": { "type": "string", "minLength": 8, "maxLength": 64 },
+    "size": {
+      "type": "object",
+      "required": ["w", "h"],
+      "properties": {
+        "w": { "type": "integer", "minimum": 13, "maximum": 52 },
+        "h": { "type": "integer", "minimum": 13, "maximum": 52 }
+      },
+      "additionalProperties": false
+    },
+    "tiles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["empty", "brick", "steel", "water", "ice", "grass", "base"]
+      }
+    },
+    "spawns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["x", "y"],
+        "properties": {
+          "x": { "type": "integer", "minimum": 0 },
+          "y": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

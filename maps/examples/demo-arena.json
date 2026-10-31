@@ -1,0 +1,28 @@
+{
+  "map_id": "demo_arena",
+  "name": "示例竞技场",
+  "version": 1,
+  "seed": 20261031,
+  "difficulty": "normal",
+  "hash": "demo0001",
+  "size": { "w": 13, "h": 13 },
+  "tiles": [
+    "steel","steel","steel","steel","steel","steel","steel","steel","steel","steel","steel","steel","steel",
+    "steel","empty","empty","brick","brick","empty","empty","empty","brick","brick","empty","empty","steel",
+    "steel","empty","grass","empty","empty","empty","water","empty","empty","empty","grass","empty","steel",
+    "steel","brick","empty","brick","empty","ice","ice","ice","empty","brick","empty","brick","steel",
+    "steel","brick","empty","brick","empty","ice","ice","ice","empty","brick","empty","brick","steel",
+    "steel","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","steel",
+    "steel","empty","water","water","empty","empty","base","empty","empty","water","water","empty","steel",
+    "steel","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","empty","steel",
+    "steel","brick","empty","brick","empty","ice","ice","ice","empty","brick","empty","brick","steel",
+    "steel","brick","empty","brick","empty","ice","ice","ice","empty","brick","empty","brick","steel",
+    "steel","empty","grass","empty","empty","empty","water","empty","empty","empty","grass","empty","steel",
+    "steel","empty","empty","brick","brick","empty","empty","empty","brick","brick","empty","empty","steel",
+    "steel","steel","steel","steel","steel","steel","steel","steel","steel","steel","steel","steel","steel"
+  ],
+  "spawns": [
+    { "x": 1, "y": 1 },
+    { "x": 11, "y": 11 }
+  ]
+}
