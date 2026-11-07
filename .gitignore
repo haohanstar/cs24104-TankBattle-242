@@ -29,8 +29,23 @@ Thumbs.db
 # EA 日志
 *.qea-journal
 *.eapx-journal
+*.lab1bak
 
 # 生成物（可重建）
-model/images/raw/
+model/images/
 *.zip
 .dsh-office-*/
+
+# 报告交付物：只交 PDF 与源码 zip，成稿不入库
+report/
+
+# 报告生成与打包工具（个人作业工具，本地保留，不入库）
+src/build_report.py
+src/build_report_lab2_content.py
+src/export_pdf.py
+src/export_pdf_lab2.py
+src/report_helpers.py
+src/gen_charts.py
+src/check_report.py
+src/make_zip.py
+src/make_source_zip.py
