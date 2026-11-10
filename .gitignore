@@ -49,3 +49,14 @@ src/gen_charts.py
 src/check_report.py
 src/make_zip.py
 src/make_source_zip.py
+
+# 报告生成与 EA 建模脚本：不进版本库、不进源码 zip
+src/build_ea_*.py
+src/ea_helpers.py
+src/clean_ea_images*.py
+src/build_report*.py
+src/export_pdf*.py
+src/gen_charts.py
+src/make_*.py
+src/check_report.py
+src/report_helpers.py
